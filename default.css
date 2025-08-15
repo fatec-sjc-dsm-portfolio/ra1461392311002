@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+}
+
+a,
+h1,
+h2,
+span,
+p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+    white-space: nowrap;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+img {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+
+:root[data-theme="default"] {
+    --backgroundColor1: #D8EDEE;
+    --backgroundColor2: #BAD9D4;
+    --backgroundColor3: #175094;
+    --textColor1: #182852;
+    --textColor2: #0D201E;
+    --textColor3: #0033E2;
+    --textColor4: #DDE4E4;
+}
+
+:root[data-theme="dark-mode"] {
+    --backgroundColor1: #175094;
+    --backgroundColor2: #798C98;
+    --backgroundColor3: #D8EDEE;
+    --textColor1: #D8EDEE;
+    --textColor2: #CCDFE0;
+    --textColor3: #92A0A1;
+    --textColor4: #020303;
+}
+
+body {
+    background-color: var(--backgroundColor1);
+    font-family: 'Open Sans', 'Poppins', sans-serif;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+#contacts {
+    align-items: center;
+    background-color: var(--backgroundColor2);
+    border-bottom: 1px solid var(--textColor1);
+    display: none;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-between;
+    padding: 15px 20px;
+    position: absolute;
+    width: 100%;
+}
+
+#contacts.open {
+    display: flex;
+}
+
+.item-contact {
+    align-items: center;
+    background-color: var(--backgroundColor2);
+    color: var(--textColor1);
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    margin: auto;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 2.5px;
+}
+
+.item-contact svg:first-child path {
+    fill: var(--textColor1);
+}
+
+.item-contact svg:nth-child(2) path {
+    stroke: var(--textColor1);
+}
