@@ -18,9 +18,9 @@ p {
     overflow: hidden;
     text-overflow: ellipsis;
     user-select: none;
-    white-space: nowrap;
     -ms-user-select: none;
     -webkit-user-select: none;
+    height: auto;
 }
 
 img {
@@ -145,6 +145,15 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+.header-secundary {
+    border-bottom: var(--backgroundColor3) solid 1px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-between;
+    padding: 15px 0;
 }
 
 #icon-dropdown path {
