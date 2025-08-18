@@ -5,11 +5,60 @@
   <meta charset="UTF-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <link rel="stylesheet" href="../default.css" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
+
+<template id="projectTechs">
+  <div class="techsList">
+    <div class="techItem">
+      <img class="imageTechItem" />
+      <p class="nameTechItem"></p>
+    </div>
+  </div>
+</template>
+
+<template id="projectItem">
+  <div class="project">
+    <div class="previewProject">
+      <h1></h1>
+      <video controls></video>
+      <img />
+    </div>
+    <div class="dataProject">
+      <nav class="menuProject">
+        <a></a>
+      </nav>
+      <div class="projectTechs"></div>
+      <div class="infoProject">
+        <h1></h1>
+        <p></p>
+      </div>
+      <div class="infoProject">
+        <h1></h1>
+        <ul>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+</template>
 
 <body data-theme="default">
   <header id="header-principal"></header>
   <div id="contacts"></div>
+  <header class="header-secundary">
+    <nav class="navbar-secundary">
+      <a href='#TCCs' id="linkTCC"></a>
+      <a href='#Academic' id="linkAcademic"></a>
+    </nav>
+  </header>
+
+  <div class="listProjects">
+    <h1 id="TCCs" class="titleProjects"></h1>
+  </div>
+
+  <div class="listProjects">
+    <h1 id="Academic" class="titleProjects"></h1>
+  </div>
 
   <script type="module" src="script.js" defer></script>
 </body>
