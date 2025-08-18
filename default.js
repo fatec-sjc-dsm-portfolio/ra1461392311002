@@ -24,10 +24,10 @@ export const contactsData = [
 ];
 
 export const headerLinksData = [
-    { key: "Home", url: "/home" },
-    { key: "About", url: "/about" },
-    { key: "Experience", url: "/experience" },
-    { key: "Project", url: "/project" }
+    { key: "Home", url: "../home" },
+    { key: "About", url: "../about" },
+    { key: "Experience", url: "../experience" },
+    { key: "Project", url: "../project" }
 ];
 
 export async function loadInlineSvg(src, { width, height } = {}) {
