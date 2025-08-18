@@ -262,11 +262,30 @@ async function createProjectItem(projectData, idProject) {
     const video = document.createElement("video");
     video.className = "video-preview";
 
-    video.innerHTML = `
-      <source src="${projectData.srcPreview}" type="video/mp4" />
-      <source src="${projectData.srcPreview}" type="video/webm" />
-      <source src="${projectData.srcPreview}" type="video/ogg" />
-    `;
+    video.autoplay = true;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.preload = "auto";
+
+    const ext = projectData.srcPreview.split('.').pop().toLowerCase();
+    const type = {
+      mp4: "video/mp4",
+      webm: "video/webm",
+      ogg: "video/ogg"
+    }[ext] || "video/mp4";
+
+    const src = document.createElement("source");
+    src.src = projectData.srcPreview;
+    src.type = type;
+    video.appendChild(src);
+
+    video.addEventListener("loadeddata", () => {
+      video.play().catch(() => {
+        video.controls = true;
+      });
+    });
+
     preview.appendChild(video);
   } else {
     const img = document.createElement("img");
