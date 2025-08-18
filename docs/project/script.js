@@ -18,6 +18,7 @@ const textProjectPt = {
       time: "2024-2",
       srcPreview: "https://github.com/equipe-javali/API_4/raw/sprint4/docs/MVP.gif",
       altPreview: "4º Semestre",
+      linkProject: "https://github.com/equipe-javali/API_4",
       selectTechs: [
         "Typescript",
         "React",
@@ -49,6 +50,7 @@ const textProjectPt = {
       time: "2024-1",
       srcPreview: "../assets/api3.mp4",
       altPreview: "3º Semestre",
+      linkProject: "https://github.com/equipe-javali/API_3",
       selectTechs: [
         "Figma",
         "Git",
@@ -80,6 +82,7 @@ const textProjectPt = {
       time: "2023-2",
       srcPreview: "https://github.com/equipedevo/API_2/assets/110677265/65084c5d-fa89-4e81-9733-ca1b2576eb8a",
       altPreview: "2º Semestre",
+      linkProject: "https://github.com/equipedevo/API_2",
       selectTechs: [
         "Figma",
         "Git",
@@ -106,6 +109,7 @@ const textProjectPt = {
       time: "2023-1",
       srcPreview: "https://github.com/equipedevo/API_1/blob/main/doc/sprint/Site_final.gif?raw=true",
       altPreview: "1º Semestre",
+      linkProject: "https://github.com/equipedevo/API_1",
       selectTechs: [
         "Figma",
         "Git",
@@ -191,7 +195,8 @@ const textProjectItemPt = {
   titleVision: "Visão do Projeto",
   titleContributions: "Contribuições Pessoais",
   titlePartners: "Parceria",
-  titleTeam: "Equipe"
+  titleTeam: "Equipe",
+  titleButton: "Veja o projeto"
 };
 
 const textProjectItemEn = {
@@ -199,7 +204,8 @@ const textProjectItemEn = {
   titleVision: "Project's Vision Vision",
   titleContributions: "Personal Contributions",
   titlePartners: "Partnership",
-  titleTeam: "Team"
+  titleTeam: "Team",
+  titleButton: "View project"
 };
 
 const techsArray = [
@@ -295,6 +301,16 @@ async function createProjectItem(projectData, idProject) {
     img.alt = projectData.altPreview;
     preview.appendChild(img);
   }
+
+  if (projectData.linkProject) {
+    const linkProject = document.createElement("a");
+    linkProject.className = "link-project";
+    linkProject.href = projectData.linkProject;
+    linkProject.textContent = projectData.titleButton;
+    linkProject.target = "_blank";
+    preview.appendChild(linkProject);
+  }
+
   project.appendChild(preview);
 
   const conteudoProject = document.createElement("div");

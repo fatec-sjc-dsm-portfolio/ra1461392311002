@@ -108,7 +108,21 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding: 0 50px 20px 50px;
+    padding: 10px 50px 20px 50px;
+}
+
+.link-project {
+    background-color: var(--backgroundColor1);
+    border: 2px solid var(--textColor1);
+    border-radius: 5px;
+    color: var(--textColor1);
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 25px;
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 5px 10px;
+    width: max-content;
 }
 
 .navbar-secundary {
@@ -141,7 +155,9 @@
     display: flex;
     flex: 1;
     flex-direction: column;
+    padding: 5px 0;
     gap: 5px;
+    justify-content: space-between;
 }
 
 .project-item {
