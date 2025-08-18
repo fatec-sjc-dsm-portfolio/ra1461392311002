@@ -47,7 +47,7 @@ const textProjectPt = {
     {
       title: "CRTL A",
       time: "2024-1",
-      srcPreview: "../assets/IconTechTS.svg",
+      srcPreview: "../assets/api3.mp4",
       altPreview: "3º Semestre",
       selectTechs: [
         "Figma",
