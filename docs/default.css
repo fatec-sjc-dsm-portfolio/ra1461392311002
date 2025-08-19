@@ -32,23 +32,19 @@ img {
 }
 
 :root[data-theme="default"] {
-    --backgroundColor1: #D8EDEE;
-    --backgroundColor2: #BAD9D4;
-    --backgroundColor3: #175094;
-    --textColor1: #182852;
-    --textColor2: #0D201E;
-    --textColor3: #0033E2;
-    --textColor4: #DDE4E4;
+    --backgroundColor1: rgb(216, 237, 238);
+    --backgroundColor2: rgb(180, 204, 250);
+    --backgroundColor3: rgb(23, 80, 148);
+    --textColor1: rgb(24, 40, 82);
+    --textColor2: rgb(221, 228, 228);
 }
 
 :root[data-theme="dark-mode"] {
-    --backgroundColor1: #175094;
-    --backgroundColor2: #798C98;
-    --backgroundColor3: #D8EDEE;
-    --textColor1: #D8EDEE;
-    --textColor2: #CCDFE0;
-    --textColor3: #92A0A1;
-    --textColor4: #020303;
+    --backgroundColor1: rgb(82, 82, 82);
+    --backgroundColor2: rgb(63, 98, 145);
+    --backgroundColor3: rgb(49, 49, 49);
+    --textColor1: rgb(250, 249, 246);
+    --textColor2: rgb(216, 237, 238);
 }
 
 body {
@@ -72,9 +68,9 @@ body {
 }
 
 #btn-contact>p {
-    color: var(--textColor4);
+    color: var(--textColor2);
     font-family: 'Poppins';
-    font-size: 20px;
+    font-size: 15px;
 }
 
 #btn-contact.open>p {
@@ -104,9 +100,9 @@ body {
 }
 
 #btn-flag p {
-    color: var(--textColor4);
+    color: var(--textColor2);
     font-family: 'Poppins';
-    font-size: 20px;
+    font-size: 15px;
 }
 
 #btn-theme {
@@ -157,12 +153,12 @@ body {
 }
 
 #icon-dropdown path {
-    fill: var(--textColor4);
-    stroke: var(--textColor4);
+    fill: var(--textColor2);
+    stroke: var(--textColor2);
 }
 
 #icon-menu path {
-    stroke: var(--textColor4);
+    stroke: var(--textColor2);
 }
 
 #btn-theme,
@@ -172,7 +168,7 @@ body {
 }
 
 #icon-theme path {
-    fill: var(--textColor4);
+    fill: var(--textColor2);
 }
 
 .item-contact {
@@ -184,7 +180,7 @@ body {
     gap: 5px;
     margin: auto;
     font-family: 'Poppins';
-    font-size: 18px;
+    font-size: 13px;
     font-weight: bold;
     margin-bottom: 2.5px;
 }
@@ -208,10 +204,10 @@ body {
 }
 
 #links-principal-menu * {
-    color: var(--textColor4);
-    text-decoration: none;
+    color: var(--textColor2);
     font-family: 'Poppins';
-    font-size: 20px;
+    font-size: 15px;
+    text-decoration: none;
 }
 
 .header-functions {

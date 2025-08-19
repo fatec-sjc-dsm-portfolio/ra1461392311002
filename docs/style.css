@@ -3,8 +3,6 @@
     flex: 1;
     flex-direction: column;
     gap: 20px;
-    max-height: 500px;
-    overflow-y: auto;
     padding: 0 15px 20px 15px;
 }
 
@@ -13,7 +11,6 @@
     flex: 1;
     flex-direction: column;
     gap: 20px;
-    max-height: 500px;
     overflow-y: auto;
     padding: 0 15px 20px 15px;
 }
@@ -35,7 +32,7 @@
 .item-data-project h1 {
     color: var(--textColor1);
     font-family: 'Open Sans';
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
@@ -49,14 +46,14 @@
 .item-data-project li {
     color: var(--textColor1);
     font-family: 'Open Sans';
-    font-size: 20px;
+    font-size: 15px;
     list-style-type: disc;
 }
 
 .item-data-project p {
     color: var(--textColor1);
     font-family: 'Open Sans';
-    font-size: 20px;
+    font-size: 15px;
     text-align: justify;
     text-indent: 50px;
 }
@@ -67,13 +64,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
     width: 100%;
 }
 
 .menu-project>a {
+    align-items: center;
     background-color: var(--backgroundColor1);
     border: 2px solid var(--textColor1);
-    height: 40px;
     display: flex;
     gap: 5px;
     padding: 5px;
@@ -86,7 +84,7 @@
 .menu-project h1 {
     color: var(--textColor1);
     font-family: 'Open Sans';
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .menu-project path {
@@ -99,9 +97,9 @@
 }
 
 .image-preview {
-    flex: 1;
+    margin: 0 auto;
+    max-height: 500px;
     max-width: 100%;
-    max-height: 400px;
 }
 
 .list-projects {
@@ -114,11 +112,10 @@
 .link-project {
     background-color: var(--backgroundColor1);
     border: 2px solid var(--textColor1);
-    border-radius: 5px;
     color: var(--textColor1);
     font-family: 'Open Sans';
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     margin: 0 auto;
     padding: 5px 10px;
@@ -137,15 +134,15 @@
 .navbar-secundary>a {
     color: var(--textColor1);
     font-family: 'Poppins';
-    font-size: 18px;
+    font-size: 13px;
     font-weight: bold;
     text-decoration: none;
 }
 
-.preview-project h1 {
+.preview-project > h1 {
     color: var(--textColor1);
     font-family: 'Open Sans';
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     padding: 10px 0;
@@ -163,7 +160,7 @@
 .project-item {
     background-color: var(--backgroundColor2);
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 10px 0;
     padding-bottom: 10px;
 }
@@ -171,7 +168,7 @@
 .title-item {
     color: var(--textColor1);
     font-family: 'Open Sans';
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     padding: 10px 0;
@@ -194,18 +191,20 @@
 .tech-item h1 {
     color: var(--textColor1);
     font-family: 'Open Sans';
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .title-projects {
     color: var(--textColor1);
     font-family: 'Roboto';
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
 
 .video-preview {
+    margin: 0 auto;
+    max-height: 500px;
     max-width: 100%;
 }
 
