@@ -16,9 +16,9 @@ const textProjectPt = {
     {
       title: "Projeto Tecsus",
       time: "2024-2",
-      srcPreview: "https://github.com/equipe-javali/API_4/raw/sprint4/docs/MVP.gif",
+      srcPreview: "../assets/api4.gif",
       altPreview: "4º Semestre",
-      linkProject: "https://github.com/equipe-javali/API_4",
+      linkProject: "https://github.com/BrunoSerpa/API_4",
       selectTechs: [
         "Typescript",
         "React",
@@ -50,7 +50,7 @@ const textProjectPt = {
       time: "2024-1",
       srcPreview: "../assets/api3.mp4",
       altPreview: "3º Semestre",
-      linkProject: "https://github.com/equipe-javali/API_3",
+      linkProject: "https://github.com/BrunoSerpa/API_3",
       selectTechs: [
         "Figma",
         "Git",
@@ -80,9 +80,9 @@ const textProjectPt = {
     {
       title: "HERMEZ",
       time: "2023-2",
-      srcPreview: "https://github.com/equipedevo/API_2/assets/110677265/65084c5d-fa89-4e81-9733-ca1b2576eb8a",
+      srcPreview: "../assets/api2.gif",
       altPreview: "2º Semestre",
-      linkProject: "https://github.com/equipedevo/API_2",
+      linkProject: "https://github.com/BrunoSerpa/API_2",
       selectTechs: [
         "Figma",
         "Git",
@@ -107,9 +107,9 @@ const textProjectPt = {
     {
       title: "CICLOVALE",
       time: "2023-1",
-      srcPreview: "https://github.com/equipedevo/API_1/blob/main/doc/sprint/Site_final.gif?raw=true",
+      srcPreview: "../assets/api1.gif",
       altPreview: "1º Semestre",
-      linkProject: "https://github.com/equipedevo/API_1",
+      linkProject: "https://github.com/BrunoSerpa/API_1",
       selectTechs: [
         "Figma",
         "Git",
@@ -252,7 +252,6 @@ function applyLanguage(lang) {
   localStorage.setItem('language', lang);
 }
 
-
 async function createProjectItem(projectData, idProject) {
   const project = document.createElement("div");
   project.className = "project-item";
@@ -322,7 +321,7 @@ async function createProjectItem(projectData, idProject) {
   if (projectData.selectTechs) {
     const link = document.createElement("a");
     link.id = "icon-tech";
-    link.href = `#projectTechs${idProject}`;
+    link.href = `#tech${idProject}`;
     link.appendChild(
       await loadInlineSvg('../assets/IconTechs.svg', { width: 30, height: 30 })
     )
@@ -334,7 +333,7 @@ async function createProjectItem(projectData, idProject) {
   }
   if (projectData.descProjectVision) {
     const link = document.createElement("a");
-    link.href = `#projectVision${idProject}`;
+    link.href = `#vision${idProject}`;
     link.appendChild(
       await loadInlineSvg('../assets/IconLight.svg', { width: 30, height: 30 })
     )
@@ -346,7 +345,7 @@ async function createProjectItem(projectData, idProject) {
   }
   if (projectData.descPersonalContributions) {
     const link = document.createElement("a");
-    link.href = `#personalContributions${idProject}`;
+    link.href = `#contributions${idProject}`;
     link.appendChild(
       await loadInlineSvg('../assets/IconPerson.svg', { width: 30, height: 30 })
     )
@@ -358,7 +357,7 @@ async function createProjectItem(projectData, idProject) {
   }
   if (projectData.partners) {
     const link = document.createElement("a");
-    link.href = `#projectPartners${idProject}`;
+    link.href = `#partners${idProject}`;
     link.appendChild(
       await loadInlineSvg('../assets/IconAssociation.svg', { width: 30, height: 30 })
     )
@@ -370,7 +369,7 @@ async function createProjectItem(projectData, idProject) {
   }
   if (projectData.team) {
     const link = document.createElement("a");
-    link.href = `#projectTeam${idProject}`;
+    link.href = `#team${idProject}`;
     link.appendChild(
       await loadInlineSvg('../assets/IconTeam.svg', { width: 30, height: 30 })
     )
@@ -385,7 +384,7 @@ async function createProjectItem(projectData, idProject) {
   if (projectData.selectTechs) {
     const techs = document.createElement("div");
     techs.className = "item-data-project";
-    techs.id = `projectTechs${idProject}`;
+    techs.id = `tech${idProject}`;
 
     const title = document.createElement("h1");
     title.textContent = projectData.titleTechnologies;
@@ -413,7 +412,7 @@ async function createProjectItem(projectData, idProject) {
   if (projectData.descProjectVision) {
     const vision = document.createElement("div");
     vision.className = "item-data-project";
-    vision.id = `projectVision${idProject}`;
+    vision.id = `vision${idProject}`;
 
     const title = document.createElement("h1");
     title.textContent = projectData.titleVision;
@@ -428,7 +427,7 @@ async function createProjectItem(projectData, idProject) {
   if (projectData.descPersonalContributions) {
     const personal = document.createElement("div");
     personal.className = "item-data-project";
-    personal.id = `personalContribution${idProject}`;
+    personal.id = `contributions${idProject}`;
 
     const title = document.createElement("h1");
     title.textContent = projectData.titleContributions;
@@ -443,7 +442,7 @@ async function createProjectItem(projectData, idProject) {
   if (projectData.partners) {
     const partner = document.createElement("div");
     partner.className = "item-data-project";
-    partner.id = `projectPartners${idProject}`;
+    partner.id = `partners${idProject}`;
 
     const title = document.createElement("h1");
     title.textContent = projectData.titlePartners;
@@ -463,7 +462,7 @@ async function createProjectItem(projectData, idProject) {
   if (projectData.team) {
     const team = document.createElement("div");
     team.className = "item-data-project";
-    team.id = `projectPartners${idProject}`;
+    team.id = `team${idProject}`;
 
     const title = document.createElement("h1");
     title.textContent = projectData.titleTeam;
