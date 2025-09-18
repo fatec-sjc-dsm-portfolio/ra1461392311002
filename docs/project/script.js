@@ -1,6 +1,7 @@
 import {
-  textHeaderPt,
-  textHeaderEn,
+  applyLanguage,
+  applyTheme,
+  techsArray,
   updateFlag,
   renderPrincipalHeader,
   renderContacts,
@@ -249,51 +250,6 @@ const textProjectItemEn = {
   titleTeam: "Team",
   titleButton: "View project"
 };
-
-const techsArray = [
-  { src: "../assets/IconTechJS.svg", alt: "Javascript", title: "Javascript" },
-  { src: "../assets/IconTechTS.svg", alt: "Typescript", title: "Typescript" },
-  { src: "../assets/IconTechPy.svg", alt: "Python", title: "Python" },
-  { src: "../assets/IconTechJava.svg", alt: "Java", title: "Java" },
-  { src: "../assets/IconTechHtml.svg", alt: "HTML", title: "HTML" },
-  { src: "../assets/IconTechCss.svg", alt: "CSS", title: "CSS" },
-  { src: "../assets/IconTechPostgres.svg", alt: "Postgres", title: "Postgres" },
-  { src: "../assets/IconTechMysql.svg", alt: "Mysql", title: "Mysql" },
-  { src: "../assets/IconTechMongo.svg", alt: "Mongo", title: "Mongo" },
-  { src: "../assets/IconTechRedis.svg", alt: "Redis", title: "Redis" },
-  { src: "../assets/IconTechCassandra.svg", alt: "Cassandra", title: "Cassandra" },
-  { src: "../assets/IconTechGit.svg", alt: "Git", title: "Git" },
-  { src: "../assets/IconTechGithub.svg", alt: "Github", title: "Github" },
-  { src: "../assets/IconTechVscode.svg", alt: "Vscode", title: "Vscode" },
-  { src: "../assets/IconTechEclipse.svg", alt: "Eclipse", title: "Eclipse" },
-  { src: "../assets/IconTechFigma.svg", alt: "Figma", title: "Figma" },
-  { src: "../assets/IconTechPhotoshop.svg", alt: "Photoshop", title: "Photoshop" },
-  { src: "../assets/IconTechReact.svg", alt: "React", title: "React" },
-  { src: "../assets/IconTechReact.svg", alt: "React", title: "React Native" },
-  { src: "../assets/IconTechExpress.svg", alt: "Express", title: "Express" },
-  { src: "../assets/IconTechSpring.svg", alt: "Spring", title: "Spring" },
-  { src: "../assets/IconTechFlask.svg", alt: "Flask", title: "Flask" },
-  { src: "../assets/IconTechVercel.svg", alt: "Vercel", title: "Vercel" },
-  { src: "../assets/IconTechNodejs.svg", alt: "Node.js", title: "Node.js" },
-  { src: "../assets/IconTechArduino.svg", alt: "Arduino", title: "Arduino" }
-];
-
-function applyTheme(name) {
-  document.documentElement.setAttribute('data-theme', name);
-  localStorage.setItem('theme', name);
-}
-
-function applyLanguage(lang) {
-  const dict = lang === 'EN' ?
-    { ...textHeaderEn, ...textProjectItemEn, ...textProjectEn } :
-    { ...textHeaderPt, ...textProjectItemPt, ...textProjectPt };
-
-  document.querySelectorAll('[data-key]').forEach(elemento => {
-    const key = elemento.getAttribute('data-key');
-    elemento.textContent = dict[key] || '';
-  });
-  localStorage.setItem('language', lang);
-}
 
 async function createProjectItem(projectData, idProject) {
   const project = document.createElement("div");
@@ -564,7 +520,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   applyTheme(currentTheme);
 
-  // render header & contacts as you already do
   const headerElement = document.getElementById('header-principal');
   const contactsElement = document.getElementById('contacts');
   const {
