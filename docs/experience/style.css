@@ -1,0 +1,12 @@
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.experience-item h1 {
+    color: var(--textColor1);
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-weight: bold;
+}
