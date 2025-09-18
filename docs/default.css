@@ -135,6 +135,21 @@ body {
     display: flex;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 50px 20px 50px;
+}
+
+.content>h1 {
+    color: var(--textColor1);
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
 #header-principal {
     align-items: center;
     background-color: var(--backgroundColor3);
@@ -215,6 +230,32 @@ body {
     gap: 10px;
     justify-content: space-between;
     padding-right: 20px;
+}
+
+.navbar-secundary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-between;
+    padding: 0 25px;
+    width: 100%;
+}
+
+.navbar-secundary>a {
+    color: var(--textColor1);
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.paragraph {
+    color: var(--textColor1);
+    font-family: 'Open Sans';
+    font-size: 15px;
+    font-weight: regular;
+    text-align: justify;
+    text-indent: 50px;
 }
 
 @media (max-width: 939.99px) {
