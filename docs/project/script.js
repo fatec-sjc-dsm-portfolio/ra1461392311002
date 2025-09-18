@@ -14,6 +14,38 @@ const textProjectPt = {
   },
   TCCs: [
     {
+      title: "OMNI",
+      time: "2025-1",
+      srcPreview: "../assets/api5.gif",
+      altPreview: "5º Semestre",
+      linkProject: "https://github.com/BrunoSerpa/API_5",
+      selectTechs: [
+        "Python",
+        "React Native",
+        "Git",
+        "Arduino",
+        "Figma",
+        "TypeScript",
+        "Express",
+        "PostgreSQL"
+      ],
+      descProjectVision: "O objetivo do projeto é desenvolver uma plataforma que possibilite a criação e gerenciamento de agentes de Inteligência Artificial focados em atendimento interno. Esses agentes serão personalizados para responder questionamentos específicos, enquanto um sistema de permissões garante que cada usuário só tenha acesso aos agentes autorizados. Além disso, o projeto envolve a integração com um banco de dados na nuvem para armazenar o histórico de interações e a criação de um aplicativo móvel que facilite a comunicação via chat, entregando respostas rápidas e precisas às dúvidas dos usuários.",
+      descPersonalContributions: "Como Product Owner, atuei na definição de requisitos e priorização das entregas, alinhando o time com os objetivos do projeto. No desenvolvimento, contribuí na implementação da responsividade no front-end e na construção de serviços back-end, como deletar usuários, atualizar e excluir agentes de IA.",
+      partners: [
+        "Pro4Tech",
+        "Faculdade de Tecnologia de São José dos Campos - Prof. Jessen Vidal"
+      ],
+      team: [
+        "Mariana Izumi - Scrum Team",
+        "Rafael Nunes - Scrum Team",
+        "Bruno Serpa - Product Owner",
+        "Katiane Soares - Scrum Team",
+        "Marcus Betti - Scrum Master",
+        "Maria Gabriela - Scrum Team",
+        "Silmara Bittencourt - Scrum Team"
+      ]
+    },
+    {
       title: "Projeto Tecsus",
       time: "2024-2",
       srcPreview: "../assets/api4.gif",
@@ -148,6 +180,16 @@ const textProjectEn = {
   TCCs: [
     {
       ...textProjectPt.TCCs[0],
+      altPreview: "5th Semester",
+      descProjectVision: "The objective of the project is to develop a platform that enables the creation and management of Artificial Intelligence agents focused on internal support. These agents are customized to answer specific questions, while a permissions system ensures that each user only has access to authorized agents. In addition, the project involves integration with a cloud database to store interaction history and the development of a mobile application that facilitates communication via chat, delivering quick and accurate responses to users' inquiries.",
+      descPersonalContributions: "As Product Owner, I worked on defining requirements and prioritizing deliveries, aligning the team with the project's objectives. In development, I contributed to implementing responsiveness on the front-end and building back-end services, such as deleting users, updating, and removing AI agents.",
+      partners: [
+        "Pro4tech",
+        "Faculty of Technology of São José dos Campos - Prof. Jessen Vidal"
+      ]
+    },
+    {
+      ...textProjectPt.TCCs[1],
       title: "Tecsus Project",
       altPreview: "4th Semester",
       descProjectVision: "The Tecsus project aims to develop an environmental monitoring system to predict and mitigate natural disasters by generating real-time alerts. The solution uses strategically positioned sensors to collect data, which is processed by an intelligent system capable of identifying imminent risk conditions.",
@@ -158,7 +200,7 @@ const textProjectEn = {
       ]
     },
     {
-      ...textProjectPt.TCCs[1],
+      ...textProjectPt.TCCs[2],
       altPreview: "3rd Semester",
       descProjectVision: "The CRTL A project was developed to facilitate corporate asset management. The solution allows tracking asset allocation, monitoring scheduled maintenance, and recording detailed usage and movement histories, providing greater control and efficiency in resource management.",
       descPersonalContributions: "I worked as a member of the development team, primarily focusing on the front-end. My responsibilities included creating efficient, responsive user interfaces aligned with user-centered design principles using React and TypeScript. I also collaborated on integrating the interfaces with the back-end APIs developed by the team, ensuring system functionality and usability.",
@@ -168,7 +210,7 @@ const textProjectEn = {
       ]
     },
     {
-      ...textProjectPt.TCCs[2],
+      ...textProjectPt.TCCs[3],
       altPreview: "2nd Semester",
       descProjectVision: "The HERMEZ project was designed to develop a robust Service Call Management system. The solution offers functionalities for planning, tracking, and controlling service calls, as well as generating detailed analytical reports to assist in strategic and operational decision-making.",
       descPersonalContributions: "As a member of the development team, I was responsible for implementing front-end functionalities using React and JavaScript to create interactive, efficient, and responsive user interfaces. I also collaborated on integrating the front-end with the back-end, ensuring efficient communication between the parts. Additionally, I worked on enhancing the user experience through creative solutions that ensured intuitive and functional navigation.",
@@ -177,7 +219,7 @@ const textProjectEn = {
       ]
     },
     {
-      ...textProjectPt.TCCs[3],
+      ...textProjectPt.TCCs[4],
       altPreview: "1st Semester",
       descProjectVision: "CICLOVALE (Informative Center for Long COVID in the Paraíba Valley) is a platform developed to assist journalists seeking detailed and comparative information on the long-term effects of COVID-19. The solution offers easy and interactive access to public data from the Unified Health System (SUS), highlighting the impact of long COVID in the Paraíba Valley region. Unlike other initiatives, CICLOVALE prioritizes usability and interactivity in data presentation.",
       descPersonalContributions: "As Scrum Master, I facilitated agile ceremonies, promoting clear and agile communication within the team, and removing impediments that could delay project progress. I acted as a bridge between team members, assisting in technical and organizational collaboration, and kept documentation up to date to ensure clarity and alignment for all. I also played a key role in front-end development, creating modern and responsive interfaces focused on user experience.",
@@ -227,6 +269,7 @@ const techsArray = [
   { src: "../assets/IconTechFigma.svg", alt: "Figma", title: "Figma" },
   { src: "../assets/IconTechPhotoshop.svg", alt: "Photoshop", title: "Photoshop" },
   { src: "../assets/IconTechReact.svg", alt: "React", title: "React" },
+  { src: "../assets/IconTechReact.svg", alt: "React", title: "React Native" },
   { src: "../assets/IconTechExpress.svg", alt: "Express", title: "Express" },
   { src: "../assets/IconTechSpring.svg", alt: "Spring", title: "Spring" },
   { src: "../assets/IconTechFlask.svg", alt: "Flask", title: "Flask" },
