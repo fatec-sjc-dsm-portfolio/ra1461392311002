@@ -122,23 +122,6 @@
     width: max-content;
 }
 
-.navbar-secundary {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: space-between;
-    padding: 0 25px;
-    width: 100%;
-}
-
-.navbar-secundary>a {
-    color: var(--textColor1);
-    font-family: 'Poppins';
-    font-size: 13px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 .preview-project > h1 {
     color: var(--textColor1);
     font-family: 'Open Sans';
