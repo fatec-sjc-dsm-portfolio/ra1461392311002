@@ -3,8 +3,7 @@ import {
   textHeaderEn,
   updateFlag,
   renderPrincipalHeader,
-  renderContacts,
-  loadInlineSvg
+  renderContacts
 } from "../default.js";
 
 const textHomePt = {
