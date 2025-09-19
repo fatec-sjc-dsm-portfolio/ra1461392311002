@@ -320,7 +320,7 @@ async function createProjectItem(projectData, idProject) {
   if (projectData.selectTechs) {
     const link = document.createElement("a");
     link.id = "icon-tech";
-    link.href = `#tech${idProject}`;
+    link.dataset.target = `tech${idProject}`;
     link.appendChild(
       await loadInlineSvg('../assets/IconTechs.svg', { width: 30, height: 30 })
     )
@@ -332,7 +332,7 @@ async function createProjectItem(projectData, idProject) {
   }
   if (projectData.descProjectVision) {
     const link = document.createElement("a");
-    link.href = `#vision${idProject}`;
+    link.dataset.target = `vision${idProject}`;
     link.appendChild(
       await loadInlineSvg('../assets/IconLight.svg', { width: 30, height: 30 })
     )
@@ -344,7 +344,7 @@ async function createProjectItem(projectData, idProject) {
   }
   if (projectData.descPersonalContributions) {
     const link = document.createElement("a");
-    link.href = `#contributions${idProject}`;
+    link.dataset.target = `contributions${idProject}`;
     link.appendChild(
       await loadInlineSvg('../assets/IconPerson.svg', { width: 30, height: 30 })
     )
@@ -356,7 +356,7 @@ async function createProjectItem(projectData, idProject) {
   }
   if (projectData.partners) {
     const link = document.createElement("a");
-    link.href = `#partners${idProject}`;
+    link.dataset.target = `partners${idProject}`;
     link.appendChild(
       await loadInlineSvg('../assets/IconAssociation.svg', { width: 30, height: 30 })
     )
@@ -368,7 +368,7 @@ async function createProjectItem(projectData, idProject) {
   }
   if (projectData.team) {
     const link = document.createElement("a");
-    link.href = `#team${idProject}`;
+    link.dataset.target = `team${idProject}`;
     link.appendChild(
       await loadInlineSvg('../assets/IconTeam.svg', { width: 30, height: 30 })
     )
@@ -480,6 +480,33 @@ async function createProjectItem(projectData, idProject) {
   }
 
   project.appendChild(conteudoProject);
+
+  const buttons = menu.querySelectorAll('a');
+  const sections = conteudoProject.querySelectorAll('.item-data-project');
+
+  function activateSection(targetId) {
+    buttons.forEach(btn => btn.classList.remove('ativo'));
+    sections.forEach(sec => sec.classList.remove('ativo'));
+
+    const btn = Array.from(buttons).find(b => b.dataset.target === targetId);
+    const sec = conteudoProject.querySelector(`#${targetId}`);
+    if (btn && sec) {
+      btn.classList.add('ativo');
+      sec.classList.add('ativo');
+    }
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      activateSection(btn.dataset.target);
+    });
+  });
+
+  if (buttons.length > 0) {
+    activateSection(buttons[0].dataset.target);
+  }
+
   return project;
 }
 

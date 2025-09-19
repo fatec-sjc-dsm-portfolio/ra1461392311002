@@ -24,9 +24,13 @@
 
 
 .item-data-project {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 5px;
+}
+
+.item-data-project.ativo {
+    display: flex;
 }
 
 .item-data-project h1 {
@@ -79,6 +83,9 @@
 
 .menu-project>a:link {
     text-decoration: none;
+}
+.menu-project>a.ativo {
+  background-color: var(--backgroundColor2);
 }
 
 .menu-project h1 {
