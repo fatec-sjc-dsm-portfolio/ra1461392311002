@@ -1,18 +1,46 @@
 .img-profile {
-    border: 1px solid var(--textColor1);
+    border: 0.0625rem solid var(--textColor1);
     background-color: var(--textColor1);
-    height: 300px;
+    height: 18.75rem;
     margin: 0 auto;
-    width: 300px;
+    width: 18.75rem;
 }
 
 .link-download {
     background-color: green;
     color: var(--textColor2);
-    font-family: 'Open Sans';
-    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
     font-weight: bold;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 0.31rem 0.63rem;
     margin: 0 auto;
+}
+
+.content-home {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1.25rem;
+    gap: 3rem;
+}
+
+.content-home>div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.5rem;
+}
+
+.content-home>div {
+    min-width: 18.75rem;
+}
+
+.content-home h1,
+.content h1 {
+    color: var(--textColor1);
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center
 }

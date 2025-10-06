@@ -147,21 +147,19 @@ async function renderPrincipalHeader(container, currentLang) {
 async function renderHome(lang) {
   const text = lang === 'PT' ? textPt : textEn;
 
-  document.getElementById('linkWho').textContent = text.Titles.Who;
-  document.getElementById('linkCurriculum').textContent = text.Titles.Curriculum;
-  document.getElementById('linkPortfolio').textContent = text.Titles.Portfolio;
-
   const whoSection = document.getElementById('Who');
   whoSection.innerHTML = `
-    <h1>${text.Titles.Who}</h1>
-    <img alt="Me" class="img-profile" src="assets/Me.png" />
-    ${text.Who.map(p => `<p class="paragraph">${p}</p>`).join('')}
-  `;
-
-  const curriculumSection = document.getElementById('Curriculum');
-  curriculumSection.innerHTML = `
-    <h1>${text.Titles.Curriculum}</h1>
-    <a class="link-download" download="Curriculum.pdf" href="assets/Curriculum.pdf">Download</a>
+    <div class="content-home">
+      <div>
+      <img alt="Me" class="img-profile" src="assets/Me.png" />
+        <h1>${text.Titles.Curriculum}</h1>
+        <a class="link-download" download="Curriculum.pdf" href="assets/Curriculum.pdf">Download</a>
+      </div>
+      <div>
+        <h1>${text.Titles.Who}</h1>
+        ${text.Who.map(p => `<p class="paragraph">${p}</p>`).join('')}
+      </div>
+    </div>
   `;
 
   const portfolioSection = document.getElementById('Portfolio');
