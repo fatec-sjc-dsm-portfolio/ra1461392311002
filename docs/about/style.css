@@ -2,36 +2,36 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 1.875rem;
 }
 
 .tech-item {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.3125rem;
 }
 
 .tech-item h1 {
     color: var(--textColor1);
     font-family: 'Open Sans';
-    font-size: 15px;
+    font-size: 0.9375rem;
 }
 
 .tech-item svg {
-    border: 1px solid var(--textColor1);
-    border-radius: 10px;
+    border: 0.0625rem solid var(--textColor1);
+    border-radius: 0.625rem;
 }
 
 .habilitys-list {
     background-color: var(--backgroundColor2);
-    border: 2px solid var(--textColor1);
-    border-radius: 10px;
+    border: 0.125rem solid var(--textColor1);
+    border-radius: 0.625rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 30px;
-    padding: 20px;
+    gap: 1.875rem;
+    padding: 1.25rem;
     margin: 0 auto;
     width: 80%;
 }
@@ -39,6 +39,6 @@
 .hability-item {
     color: var(--textColor1);
     font-family: 'Open Sans';
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
 }
