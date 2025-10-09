@@ -59,6 +59,8 @@ const textHeaderEn = {
     Language: 'English'
 };
 
+export const year = new Date().getFullYear() - 2005;
+
 export const contactsData = [
     { type: 'link', url: 'https://github.com/BrunoSerpa', label: 'GitHub', icon: '../assets/IconGithub.svg' },
     { type: 'link', url: 'https://www.linkedin.com/in/brunoserpa/', label: 'LinkedIn', icon: '../assets/IconLinkedin.svg' },

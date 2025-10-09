@@ -1,10 +1,9 @@
 import {
   applyLanguage,
   applyTheme,
-  loadInlineSvg
+  loadInlineSvg,
+  year
 } from "./default.js";
-
-const year = new Date().getFullYear() - 2005;
 
 const textPt = {
   Titles: {
