@@ -37,12 +37,12 @@ const textProjectPt = {
         "Faculdade de Tecnologia de São José dos Campos - Prof. Jessen Vidal"
       ],
       team: [
-        "Mariana Izumi - Scrum Team",
-        "Rafael Nunes - Scrum Team",
         "Bruno Serpa - Product Owner",
-        "Katiane Soares - Scrum Team",
         "Marcus Betti - Scrum Master",
+        "Katiane Soares - Scrum Team",
+        "Mariana Izumi - Scrum Team",
         "Maria Gabriela - Scrum Team",
+        "Rafael Nunes - Scrum Team",
         "Silmara Bittencourt - Scrum Team"
       ]
     },
@@ -103,9 +103,9 @@ const textProjectPt = {
         "Katiane Soares - Product Owner",
         "Caique Silva - Scrum Master",
         "Bruno Serpa - Scrum Team",
+        "Marcus Betti - Scrum Team",
         "Maria Gabriela - Scrum Team",
         "Mariana Izumi - Scrum Team",
-        "Marcus Betti - Scrum Team",
         "Rafael Nunes - Scrum Team",
         "Silmara Bittencourt - Scrum Team"
       ]
@@ -163,8 +163,8 @@ const textProjectPt = {
         "Bruno Serpa - Scrum Master",
         "Diego José da Conceição - Scrum Team",
         "Gabriel Lucena do Rosário - Scrum Team",
-        "Nathalia Ellen Domingos - Scrum Team",
         "João Gabriel Alves Silva - Scrum Team",
+        "Nathalia Ellen Domingos - Scrum Team",
         "Pedro Augusto N. Silva - Scrum Team",
         "Rafael Nunes - Scrum Team"
       ]
