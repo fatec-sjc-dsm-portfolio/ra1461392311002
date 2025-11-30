@@ -13,8 +13,13 @@ const textPt = {
   },
   Works: [
     {
+      title: 'Estagiário',
+      time: '01/11/2025 - Atual',
+      paragraph: 'Atuo na GRAUNA AEROSPACE LTDA, localizada na Rua Januária, 1100 - Chácaras Reunidas, São José dos Campos - SP. Minhas atividades são focadas na automação de tarefas utilizando Python e no desenvolvimento de aplicações voltadas para otimizar processos internos e apoiar a gestão da empresa.'
+    },
+    {
       title: 'Aprendiz',
-      time: '01/12/2022 - Atual',
+      time: '01/12/2022 - 01/12/2025',
       paragraph: 'Atuo na SOS ECO BIKE, localizada na Avenida Presidente Juscelino Kubitschek, 4946 - Monte Castelo, São José dos Campos - SP. Minhas atividades são focadas principalmente no atendimento ao cliente e na manutenção mecânica de bicicletas. Entre minhas responsabilidades estão garantir a satisfação dos clientes por meio de um atendimento de qualidade e realizar reparos e ajustes técnicos, assegurando o pleno funcionamento e a segurança das bicicletas.'
     }
   ],
@@ -34,8 +39,13 @@ const textEn = {
   },
   Works: [
     {
+      title: "Intern",
+      time: "11/01/2025 - Present",
+      paragraph: "I work at GRAUNA AEROSPACE LTDA, located at Rua Januária, 1100 - Chácaras Reunidas, São José dos Campos - SP. My activities are mainly focused on task automation using Python and on the development of applications aimed at optimizing internal processes and supporting the company's management."
+    },
+    {
       title: 'Apprentice',
-      time: '12/01/2022 - Present',
+      time: '12/01/2022 - 01/12/2025',
       paragraph: 'I work at SOS ECO BIKE, located at Avenida Presidente Juscelino Kubitschek, 4946 - Monte Castelo, São José dos Campos - SP. My activities are mainly focused on customer service and bicycle mechanical maintenance. Among my responsibilities are ensuring customer satisfaction through quality service and performing technical repairs and adjustments, ensuring the full functionality and safety of the bicycles.'
     }
   ],
@@ -66,9 +76,6 @@ function createExperienceItem({ title, time, paragraph }) {
 
 async function renderExperience(lang) {
   const text = lang === 'PT' ? textPt : textEn;
-
-  document.getElementById('linkWork').textContent = text.Titles.Work;
-  document.getElementById('linkVolunteering').textContent = text.Titles.Volunteering;
 
   const workSection = document.getElementById('Work');
   workSection.innerHTML = `<h1>${text.Titles.Work}</h1>`;
