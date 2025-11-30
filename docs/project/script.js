@@ -10,7 +10,7 @@ import {
 
 const textProjectPt = {
   Titles: {
-    TCCs: "TCCs e Projetos Integradores",
+    TCCs: "Projetos Integradores",
     Academic: "Projetos Acadêmicos"
   },
   TCCs: [
@@ -206,7 +206,7 @@ const textProjectPt = {
 
 const textProjectEn = {
   Titles: {
-    TCCs: "TCCs and Integrative Projects",
+    TCCs: "Integrative Projects",
     Academic: "Academic Projects"
   },
   TCCs: [
@@ -565,22 +565,27 @@ async function renderProjects(lang) {
   const textProj = lang === 'PT' ? textProjectPt : textProjectEn;
   const textProjItm = lang === 'PT' ? textProjectItemPt : textProjectItemEn;
 
-  const linkTCC = document.getElementById('linkTCC');
-  linkTCC.textContent = textProj.Titles.TCCs;
-  const linkAcademic = document.getElementById('linkAcademic');
-  linkAcademic.textContent = textProj.Titles.Academic;
+  const navbar = document.getElementById("navbarSecundary");
+  navbar.innerHTML = ``;
 
   const listTCCs = document.getElementById('list-TCCs');
   listTCCs.innerHTML = `<h1 class="title-projects" id="TCCs">${textProj.Titles.TCCs}</h1>`;
 
   const listAcademic = document.getElementById('list-academic');
-  listAcademic.innerHTML = `<h1 class="title-projects" id="Academic">${textProj.Titles.Academic}</h1>`;
+  listAcademic.innerHTML = ``;
 
   let count = 1;
   for (const project of textProj.TCCs) {
     const item = await createProjectItem({ ...project, ...textProjItm }, count);
+    item.id =project.title.replace(/\s+/g, '-');
     listTCCs.appendChild(item);
     count++;
+    
+    const link = document.createElement("a");
+    link.href = `#${project.title.replace(/\s+/g, '-')}`;
+    link.textContent = project.title;
+    link.className = "link-academic";
+    navbar.appendChild(link);
   }
 
   for (const project of textProj.Academic) {
