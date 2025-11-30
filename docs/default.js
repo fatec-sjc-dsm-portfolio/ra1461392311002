@@ -6,6 +6,7 @@ export const techsArray = [
     { src: "../assets/IconTechJava.svg", alt: "Java", title: "Java" },
     { src: "../assets/IconTechHtml.svg", alt: "HTML", title: "HTML" },
     { src: "../assets/IconTechCss.svg", alt: "CSS", title: "CSS" },
+    { src: "../assets/IconTechFlutter.svg", alt: "Flutter", title: "Flutter" },
 
     // Relational Databases
     { src: "../assets/IconTechPostgres.svg", alt: "Postgres", title: "Postgres" },
